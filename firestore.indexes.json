@@ -1,0 +1,13 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "comentarios",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "expedienteId", "order": "ASCENDING" },
+        { "fieldPath": "fechaCreacion", "order": "ASCENDING" }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primario: #1B4D35;
+  --color-nafin: #6B1A2A;
+  --color-acento: #8B6914;
+  --color-superficie: #F5F5F5;
+  --color-borde: #D0D0D0;
+  --color-texto: #1A1A1A;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    color: var(--color-texto);
+    background-color: var(--color-superficie);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-superficie);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-borde);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #AAAAAA;
+  }
+
+  input, select, textarea {
+    color: var(--color-texto);
+  }
+}
+
+@layer components {
+  .seccion-titulo {
+    @apply text-xs font-semibold uppercase tracking-wider text-[#6B6B6B] mb-4;
+  }
+
+  .panel {
+    @apply bg-white border border-borde;
+  }
+
+  .campo-grupo {
+    @apply flex flex-col gap-1.5;
+  }
+
+  .campo-label {
+    @apply text-xs font-semibold uppercase tracking-wide text-texto;
+  }
+
+  .campo-input {
+    @apply w-full border border-borde px-3 py-2 text-sm bg-white focus:outline-none focus:ring-1 focus:ring-primario;
+  }
+}
